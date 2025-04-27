@@ -1,23 +1,20 @@
-// This file is a fallback for using MaterialIcons on Android and web.
-
-import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import { SymbolWeight } from 'expo-symbols';
 import React from 'react';
 import { OpaqueColorValue, StyleProp, ViewStyle } from 'react-native';
 
-// Add your SFSymbol to MaterialIcons mappings here.
+// Add your SFSymbol to FontAwesome6 mappings here.
 const MAPPING = {
-  // See MaterialIcons here: https://icons.expo.fyi
+  // See FontAwesome6 here: https://icons.expo.fyi
   // See SF Symbols in the SF Symbols app on Mac.
-  'house.fill': 'home',
-  'paperplane.fill': 'send',
-  'chevron.left.forwardslash.chevron.right': 'code',
-  'chevron.right': 'chevron-right',
   'person.fill': 'person',
+  'dumbbell.fill': 'dumbbell',
+  'house.fill': 'house',
+  'chart.bar.fill': 'chart-column',  
 } as Partial<
   Record<
     import('expo-symbols').SymbolViewProps['name'],
-    React.ComponentProps<typeof MaterialIcons>['name']
+    React.ComponentProps<typeof FontAwesome6>['name']
   >
 >;
 
@@ -40,5 +37,5 @@ export function IconSymbol({
   style?: StyleProp<ViewStyle>;
   weight?: SymbolWeight;
 }) {
-  return <MaterialIcons color={color} size={size} name={MAPPING[name]} style={style} />;
+  return <FontAwesome6 color={color} size={size} name={MAPPING[name]} style={style} />;
 }
