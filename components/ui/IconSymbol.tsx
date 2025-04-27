@@ -10,7 +10,10 @@ const MAPPING = {
   'person.fill': 'person',
   'dumbbell.fill': 'dumbbell',
   'house.fill': 'house',
-  'chart.bar.fill': 'chart-column',  
+  'chart.bar.fill': 'chart-column',
+  'scalemass.fill': 'weight-scale',
+  'ruler.fill': 'ruler',
+  'percent': 'percent',
 } as Partial<
   Record<
     import('expo-symbols').SymbolViewProps['name'],
